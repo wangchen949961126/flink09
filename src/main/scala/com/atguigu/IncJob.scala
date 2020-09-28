@@ -27,6 +27,7 @@ object IncJob {
 
   class MyAggFunc extends AggregateFunction[(String, Double), (String, Double, Int), (String, Double)] {
 
+    // 设定初始值
     override def createAccumulator(): (String, Double, Int) = {
       ("", 0.0, 0)
     }
